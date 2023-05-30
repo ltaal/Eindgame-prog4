@@ -1,7 +1,7 @@
 import '../css/style.css'
 import { Actor, Engine, Vector } from "excalibur"
 import { Resources, ResourceLoader } from './resources.js'
-import { Resources, ResourceLoader } from './main-character'
+import { mainCharacter} from './main-character.js'
 
 export class Game extends Engine {
 
@@ -11,19 +11,9 @@ export class Game extends Engine {
     }
 
     startGame() {
-        console.log("start de game!")
-        const mainCharacter = new Actor()
-        mainCharacter.graphics.use(Resources.mainCharacter.toSprite())
-        mainCharacter.pos = new Vector(400, 300)
-        mainCharacter.vel = new Vector(-10,0)
-        this.add(mainCharacter)
+        let Sjaak = new mainCharacter()
+            this.add(Sjaak)
 
-        console.log("start de game!")
-        const mainCharacter = new Actor()
-        mainCharacter.graphics.use(Resources.mainCharacter.toSprite())
-        mainCharacter.pos = new Vector(400, 300)
-        mainCharacter.vel = new Vector(-10,0)
-        this.add(mainCharacter)
     }
 }
 
