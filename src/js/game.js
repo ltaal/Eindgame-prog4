@@ -15,7 +15,13 @@ export class Game extends Engine {
         bg.graphics.use(Resources.background.toSprite());
         bg.pos = new Vector( 740 , 433);
         bg.scale = new Vector(1.03 , 1.15);
-        this.add(bg);
+        
+
+        const bground = new Actor();
+        bground.graphics.use(Resources.backGround.toSprite());
+        bground.pos = new Vector( 0 , 0);
+        bground.scale = new Vector(1.03 , 1.15);
+        this.add(bground);
 
         let Sjaak = new mainCharacter()
             this.add(Sjaak)
