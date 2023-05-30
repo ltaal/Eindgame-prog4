@@ -6,11 +6,17 @@ import { mainCharacter} from './main-character.js'
 export class Game extends Engine {
 
     constructor() {
-        super({ width: 800, height: 600 })
+        super({ width: 1530, height: 860 })
         this.start(ResourceLoader).then(() => this.startGame())
     }
 
     startGame() {
+        const bg = new Actor();
+        bg.graphics.use(Resources.background.toSprite());
+        bg.pos = new Vector( 740 , 433);
+        bg.scale = new Vector(1.03 , 1.15);
+        this.add(bg);
+
         let Sjaak = new mainCharacter()
             this.add(Sjaak)
 
