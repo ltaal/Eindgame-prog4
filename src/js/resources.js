@@ -9,6 +9,6 @@ const Resources = {
     background: new ImageSource(backgroundImage),
     backGround: new ImageSource(backGroundImage)
 }
-const ResourceLoader = new Loader([Resources.MainCharacter , Resources.background])
+const ResourceLoader = new Loader([Resources.MainCharacter , Resources.background , Resources.backGround])
 
 export { Resources, ResourceLoader }
